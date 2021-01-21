@@ -1,4 +1,3 @@
-# support-dev-mobile
 # Introduction au développement mobile
 
 Ce dépôt contient le code source de la version compilé du support du cours **Introduction au développement Mobile**

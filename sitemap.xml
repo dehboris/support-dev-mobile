@@ -1,33 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
  <url>
-  <loc>https://my-jigsaw-docs.com/docs/algolia-docsearch</loc>
-  <lastmod>2021-01-19T05:23:42+00:00</lastmod>
+  <loc>http://localhost/bin/serve.php</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
-  <loc>https://my-jigsaw-docs.com/docs/custom-404-page</loc>
-  <lastmod>2021-01-19T05:23:42+00:00</lastmod>
+  <loc>http://localhost/docs/algolia-docsearch</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
-  <loc>https://my-jigsaw-docs.com/docs/customizing-your-site</loc>
-  <lastmod>2021-01-19T05:23:42+00:00</lastmod>
+  <loc>http://localhost/docs/custom-404-page</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
-  <loc>https://my-jigsaw-docs.com/docs/getting-started</loc>
-  <lastmod>2021-01-19T05:23:42+00:00</lastmod>
+  <loc>http://localhost/docs/customizing-your-site</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
-  <loc>https://my-jigsaw-docs.com/docs/navigation</loc>
-  <lastmod>2021-01-19T05:23:42+00:00</lastmod>
+  <loc>http://localhost/docs/getting-started</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
-  <loc>https://my-jigsaw-docs.com</loc>
-  <lastmod>2021-01-19T05:23:42+00:00</lastmod>
+  <loc>http://localhost/docs/navigation</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
+  <changefreq>daily</changefreq>
+ </url>
+ <url>
+  <loc>http://localhost/flutter/app</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
+  <changefreq>daily</changefreq>
+ </url>
+ <url>
+  <loc>http://localhost/flutter/dart</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
+  <changefreq>daily</changefreq>
+ </url>
+ <url>
+  <loc>http://localhost/flutter/install</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
+  <changefreq>daily</changefreq>
+ </url>
+ <url>
+  <loc>http://localhost/flutter/introduction</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
+  <changefreq>daily</changefreq>
+ </url>
+ <url>
+  <loc>http://localhost/flutter/poo</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
+  <changefreq>daily</changefreq>
+ </url>
+ <url>
+  <loc>http://localhost/flutter/widget-basique</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
+  <changefreq>daily</changefreq>
+ </url>
+ <url>
+  <loc>http://localhost/flutter/widget-interactifs</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
+  <changefreq>daily</changefreq>
+ </url>
+ <url>
+  <loc>http://localhost/flutter</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
+  <changefreq>daily</changefreq>
+ </url>
+ <url>
+  <loc>http://localhost</loc>
+  <lastmod>2021-01-21T06:24:00+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
 </urlset>
