@@ -4,12 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="description" content="Les bases de Dart.">
+        <meta name="description" content="Les structures de contrôle.">
 
         <meta property="og:site_name" content="Intro Développement Mobile"/>
-        <meta property="og:title" content="Les bases de Dart | Intro Développement Mobile"/>
-        <meta property="og:description" content="Les bases de Dart."/>
-        <meta property="og:url" content="/flutter/dart"/>
+        <meta property="og:title" content="Les structures de contrôle | Intro Développement Mobile"/>
+        <meta property="og:description" content="Les structures de contrôle."/>
+        <meta property="og:url" content="/flutter\dart/control-flow"/>
         <meta property="og:image" content="/assets/img/logo.png"/>
         <meta property="og:type" content="website"/>
 
@@ -17,7 +17,7 @@
         <meta name="twitter:card" content="summary_large_image">
 
         
-        <title>Intro Développement Mobile | Les bases de Dart</title>
+        <title>Intro Développement Mobile | Les structures de contrôle</title>
 
         <link rel="home" href="">
         <link rel="icon" href="/favicon.ico">
@@ -181,162 +181,132 @@
         </nav>
 
         <div class="DocSearch-content w-full lg:w-3/5 break-words pb-16 lg:pl-4" v-pre>
-            <h1 id="base-dart">Les Base de Dart</h1>
+            <h1 id="les-structures-de-controle">Les structures de contrôle</h1>
 
-<h2 id="les-variables">1. Les variables</h2>
+<h2>If / Else</h2>
 
-<p>La structure de base d'une variable est la suivante</p>
+<h3>Exemple (If/ Else)</h3>
 
-<p><code>[modifier] type name [= value];</code></p>
+<pre><code class="language-php">var x = 5;
 
-<ul>
-<li><code>type</code> est le <strong>type</strong> de la variable.</li>
-<li><code>name</code> est le <strong>nom</strong> de la variable.</li>
-<li><code>value</code> est la <strong>valeur</strong> de la variable.</li>
-</ul>
-
-<blockquote>
-  <p><code>[=value]</code> signifie que cette partie est optionnelle, dans ce cas la variable est automatiquement initialisé à <code>null</code></p>
-</blockquote>
-
-<h3>Les Types primitifs</h3>
-
-<p>Les types primitifs ou explicites sont utilisés pour désigner le <code>type</code> que la variable doit prendre lors de sa déclaration.</p>
-
-<p>Les types supportés par le langage Dart sont :</p>
-
-<table class="table-auto">
-    <tr class="bg-gray-400">
-        <th class="px-4 py-2">Type</th>
-        <th class="px-4 py-2">Description</th>
-    </tr>
-    <tr>
-        <td class="px-4 py-2"><code>int</code></td>
-        <td class="px-4 py-2">Les Entiers</td>
-    </tr>
-    <tr>
-        <td class="px-4 py-2"><code>double</code></td>
-        <td class="px-4 py-2">Les nombres à virgules</td>
-    </tr>
-    <tr>
-        <td class="px-4 py-2"><code>num</code></td>
-        <td class="px-4 py-2">Entier ou nombre à virgule</td>
-    </tr>
-    <tr>
-        <td class="px-4 py-2"><code>bool</code></td>
-        <td class="px-4 py-2">Booléen</td>
-    </tr>
-    <tr>
-        <td class="px-4 py-2"><code>String</code></td>
-        <td class="px-4 py-2">Chaîne de caractères</td>
-    </tr>
-    <tr>
-        <td class="px-4 py-2"><code>List</code></td>
-        <td class="px-4 py-2">Tableau</td>
-    </tr>
-    <tr>
-        <td class="px-4 py-2"><code>Map</code></td>
-        <td class="px-4 py-2">Tableau associatifs</td>
-    </tr>
-
-</table>
-
-<p>Exemple</p>
-
-<pre><code class="language-dart">    String voiture = 'Lexus'; // Déclaration d'une variable de type chaîne de caratères
-    int taille = 10;                
-    double poids = 20.5;      // Déclaration d'une variable de type entier
-    bool estRouge = false;    // Déclaration d'une variable de type booléen
-</code></pre>
-
-<h3>Inférence de Types (Type inference)</h3>
-
-<p>L'inférence de types est un mécanisme qui permet à un compilateur ou un interpréteur de rechercher automatiquement les types associés à des expressions, sans qu'ils soient indiqués explicitement dans le code source.</p>
-
-<h4>Le mot clé <code>var</code></h4>
-
-<p>L'utilisation du mot clé <code>var</code> permet de déclaré des variables sans précisé le type qui sera connu du programme lors de son initialisation.
-La modification du contenu de ces variables sont possible en donnant le même type que lors de l'initialisation.</p>
-
-<blockquote>
-  <p>Après l'initialisation, la variable ne peux plus changer de type avant la fin de l'exécution du programme.</p>
-</blockquote>
-
-<p>Exemple</p>
-
-<pre><code class="language-dart">    var voiture = 'Lexus'; // Déclaration d'une variable de type chaîne de caratères
-    var taille = 10;                
-    var poids = 20.5;      // Déclaration d'une variable de type entier
-    var estRouge = false;    // Déclaration d'une variable de type booléen
-</code></pre>
-
-<h4>Le mot clé <code>dynamic</code></h4>
-
-<p>L'utilisation du mot clé <code>dynamic</code> permet de déclaré des variables de n'importe quel type.</p>
-
-<h3 id="sdk-flutter">String ou chaînes de caractères</h3>
-
-<h4>L'interpolation de chaîne (String Interpolation)</h4>
-
-<p>L'interpolation de chaînes permet de combiner des variables et du texte pour former une chaîne.
-On l'utilise le symbole <code>$</code> devant le <strong>nom de la variable</strong> dans la chaîne de caractères.</p>
-
-<pre><code class="language-dart">void main(){
-    String name = 'Freddy';
-
-    print("Je me nomme $name et mon prénom compte ${name.length} lettres.");
+if (x &lt; 10) {
+  print('x is less than 10');
+} else {
+  print ('x is not less than 10')
 }
 </code></pre>
 
-<p>Le résultat sera</p>
+<h3>Exemple (else if)</h3>
 
-<pre><code class="language-sh">Je me nomme Freddy et mon prénom compte 6 lettres.
-</code></pre>
+<pre><code class="language-php">int x = 10;
 
-<h3>Les modificateurs de variable</h3>
-
-<ul>
-<li><p>Lorsque le mot clé <code>final</code> est utilisé lors de la déclaration des variables, elles ne peuvent plus être modifiés après leurs initialisation.</p></li>
-<li><p>Lorsque le mot clé <code>const</code> est utilisé lors de la déclaration des variables, ces variables doivent être initialisé et ne euvent plus être modifiés.</p></li>
-</ul>
-
-<!-- - Lorsque le mot clé `static` est utilisé lors de la déclaration des variables, les variables ne peuvent plus être modifiés après leurs initialisation. -->
-
-<hr />
-
-<h2>Les Conditions</h2>
-
-<h3>Les switchs</h3>
-
-<hr />
-
-<h2>Les structures itérative</h2>
-
-<h3>Les boucles for</h3>
-
-<h3>Les boucles while</h3>
-
-<hr />
-
-<h2>Les structures itérative avancée</h2>
-
-<h3 id="getting-started-building-your-site">Les Listes</h3>
-
-<h3 id="getting-started-building-your-site">Les Maps</h3>
-
-<h2>2. Les fonctions</h2>
-
-<p>Le schéma d'une fonction sans paramètres est ka sui</p>
-
-<pre><code class="language-dart">type nomFonction(parametres){
-    // Instructions
+if (x &lt; 10) {
+  print('x is less than 10');
+} else if (x == 10) {
+  print ('x is exactly 10')
+} else {
+  print ('x is greater than 10');
 }
 </code></pre>
 
-<ul>
-<li><code>type</code> est le type de retour ou (sortie)</li>
-<li><code>nomFonction</code> : est le nom que vous donner à votre fonction</li>
-</ul>
+<h2>While / Do While</h2>
+
+<h3>Exemple (While)</h3>
+
+<pre><code class="language-php">var x = 1;
+
+while (x &lt; 5) {
+  print(x);
+  x *= 2; 
+}
+</code></pre>
+
+<p>Resultat</p>
+
+<pre><code>1
+2
+4
+8
+</code></pre>
+
+<h3>Exemple (Do-While)</h3>
+
+<pre><code class="language-php">var x = 1;
+
+do {
+  print (x);
+  x += 5; 
+} while (x == 2);
+</code></pre>
+
+<h2>Ternaire</h2>
+
+<p>La structure de contrôle ternaire est la version raccourcie de <code>if/else</code></p>
+
+<h3>Exemple 1</h3>
+
+<pre><code class="language-php">bool bullseye = true
+var gameOver = bullseye ? 'Game over, you win!' : 'throw again'
+</code></pre>
+
+<h3>Exemple 2</h3>
+
+<pre><code class="language-php">var formInput = form.isEditable 
+  ? return (/* DOM Input Element */)
+  : return (/* Disabled Input Element*/)
+</code></pre>
+
+<h3>Switch</h3>
+
+<pre><code>var animal = 'zebra';
+
+switch (animal) {
+  case 'lion':
+    print('King of all Animals');
+    break;
+  case 'Worthog':
+    print("Animal kingdom's jester");
+    break;
+  case 'Zebra':
+     print("Heyena food");
+     break;
+ default:
+   print('Not a safari animal');
+   break;
+}
+</code></pre>
+
+<h3>For</h3>
+
+<h3>Exemple 1</h3>
+
+<pre><code class="language-php">for (var i = 0; i &lt; 10; i++) {
+  print(i);
+}
+
+/* =&gt;  
+0
+1
+2
+3
+...
+10
+*/
+</code></pre>
+
+<h3>Exemple 2</h3>
+
+<pre><code class="language-php">List fruitList = ['apple', 'orange', 'banana'];
+for (var fruit in fruitList) {
+  print(fruit);
+}
+
+/* =&gt;
+apple
+orange
+banana
+ */
+</code></pre>
         </div>
     </div>
 </section>
